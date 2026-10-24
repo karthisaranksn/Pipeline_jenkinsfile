@@ -1,9 +1,10 @@
 pipeline{
     agent any
     stages{
-        stage('clean workspace') {
+        stage('clean workspace and checkout') {
             steps{
                 cleanWs()
+                checkout scm
             }
         }
         stage('create directory') {
