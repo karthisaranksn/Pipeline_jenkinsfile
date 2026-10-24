@@ -10,7 +10,10 @@ pipeline{
         stage('create directory') {
             steps{
                 sh 'mkdir -p new_folder'
+                sh 'chmod 744 file1.sh'
+                sh './file1.sh'
                 sh 'ls -la'
+
             }
         }
         
